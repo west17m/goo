@@ -1,23 +1,7 @@
-![Python](https://img.shields.io/Gentoo-overlay)
-Gentoo Osterman Overlay
-https://img.shields.io/badge/any_text-you_like-blue
-# OJournal 9
+![Static Badge](https://img.shields.io/badge/Gentoo-overlay-blue?style=plastic&logo=gentoo&labelColor=%2354487A&link=https%3A%2F%2Fgentoo.org&link=https%3A%2F%2Fwiki.gentoo.org%2Fwiki%2FProject%3AOverlays%2FOverlays_guide)
+# Gentoo Osterman Overlay (goo)
 
-The last thing I needed to do was to start this project over, yet here we are. 
-This time around, the stack is SQLAlchemy, pytest, fastapi, and React. 
+This is my first gentoo overlay. 
 
 ## Dev
-Here is the quickstart to download the project and start development
-
- ```bash
-git clone git@github.com:west17m/ojournal9.git
-py -m venv .venv
-.\.venv\Scripts\activate
-```
-
-Now inside the virtual environment
-
-```bashv
-pip install -r requirements.txt
-pytest
-```
+coming soon.
