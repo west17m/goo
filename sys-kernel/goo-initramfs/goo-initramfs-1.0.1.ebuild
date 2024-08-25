@@ -13,7 +13,7 @@ SRC_URI="https://github.com/west17m/goo-initramfs/archive/refs/tags/${PV}.tar.gz
 S="${WORKDIR}/${P}"
 
 LICENSE="GPL-2+"
-# SLOT="0"
+SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND=">=sys-kernel/genkernel-4.3.10"
