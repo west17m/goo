@@ -2,6 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <upstream>
-    <remote-id type="github">west17m/remote-luks-zfs-initramfs</remote-id>
+    <remote-id type="github">west17m/goo-initramfs</remote-id>
   </upstream>
 </pkgmetadata>

@@ -8,13 +8,12 @@ inherit kernel-2 unpacker
 
 DESCRIPTION="Genkernel overlay to build an initrd with ssh, luks, and zfs capability"
 HOMEPAGE="https://github.com/west17m/"
-# SRC_URI="https://github.com/west17m/${PN}/releases/tag/${PVR}"
-SRC_URI="https://github.com/west17m/remote-luks-zfs-initramfs/archive/refs/tags/1.0.1.tar.gz"
+SRC_URI="https://github.com/west17m/goo-initramfs/archive/refs/tags/${PV}.tar.gz"
 
 S="${WORKDIR}/${P}"
 
 LICENSE="GPL-2+"
-SLOT="0"
+# SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND=">=sys-kernel/genkernel-4.3.10"
@@ -27,12 +26,12 @@ src_unpack() {
 }
 
 src_install() {
-	dodir /usr/src/${PN}
+	# dodir /usr/src/${PN}
 	insinto /usr/src/${PN}
-	# cp -r ${S}/etc ${S}/root ${D}/usr/src/${PN}
-	doins -r ${S}/clean.sh clean.sh
-	doins -r ${S}/etc etc
-	doins -r ${S}/root root
+	# cp -r "${S}"/etc "${S}"/root ${D}/usr/src/${PN}
+	doins -r "${S}"/clean.sh clean.sh
+	doins -r "${S}"/etc etc
+	doins -r "${S}"/root root
 }
 
 pkg_postinst() {
