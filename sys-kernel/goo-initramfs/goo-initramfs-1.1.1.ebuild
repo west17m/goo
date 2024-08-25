@@ -27,7 +27,7 @@ src_unpack() {
 
 src_install() {
 	insinto /usr/src/${PN}
-	doins -r "${S}"/sourceroot
+	doins -r "${S}"/sourceroot/*
 	dobin bin/goo-initrd
 }
 
@@ -35,7 +35,11 @@ pkg_postinst() {
 	#@TODO check if loop.crypt has been created
 	elog "Generate your keyfile with"
 	elog "goo-initrd make-keyfile"
-	elog "and place it in /usr/src/goo-initramfs"
+	elog "and place it in /usr/src/goo-initramfs/root"
+        elog
 	elog "Run the following to generate the initrd file"
 	elog "goo-initrd make-initrd"
+        elog
+        elog "be sure to set the following in /etc/genkernel.conf"
+        elog "INITRAMFS_OVERLAY=\"/usr/src/goo-initramfs\""
 }
