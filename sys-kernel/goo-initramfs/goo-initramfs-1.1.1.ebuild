@@ -28,6 +28,7 @@ src_unpack() {
 src_install() {
 	insinto /usr/src/${PN}
 	doins -r "${S}"/sourceroot/*
+	fperms 770 /usr/src/${PN}/root/unlock.sh
 	dobin bin/goo-initrd
 }
 
@@ -36,10 +37,10 @@ pkg_postinst() {
 	elog "Generate your keyfile with"
 	elog "goo-initrd make-keyfile"
 	elog "and place it in /usr/src/goo-initramfs/root"
-        elog
+	elog
 	elog "Run the following to generate the initrd file"
 	elog "goo-initrd make-initrd"
-        elog
-        elog "be sure to set the following in /etc/genkernel.conf"
-        elog "INITRAMFS_OVERLAY=\"/usr/src/goo-initramfs\""
+	elog
+	elog "be sure to set the following in /etc/genkernel.conf"
+	elog "INITRAMFS_OVERLAY=\"/usr/src/goo-initramfs\""
 }
